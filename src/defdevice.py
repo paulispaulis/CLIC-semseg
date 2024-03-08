@@ -8,8 +8,6 @@ When definining tensors inteded for cuda in other files, it's advised to add the
 
 import torch
 
-def_device = 'cpu'
-
 def force_device(device):
     """
     Function forces all tensors to be automatically created on the selected device.
@@ -18,5 +16,9 @@ def force_device(device):
     def_device = device
     
     torch.cuda.set_device(def_device)
-    
-#force_device(def_device)
+
+def force_cpu(device):
+
+    global def_device
+    def_device = device
+=======

@@ -1,19 +1,24 @@
 import os
 import sys
+import torch
 sys.path.append('..')
+from src import defdevice
+
+# If you have a cuda device, specify in the force_device function
+if torch.cuda.is_available():
+    defdevice.force_device('cuda:0')
+else:
+    defdevice.force_cpu('cpu')
+
 from src import nns
 from src import embedders
 from src import segmodel
 import torch
 from demo_functions import run_image, run_video
 import streamlit as st
-from src import defdevice
 import os
 import tempfile
 st.set_page_config(layout="wide")
-
-if torch.cuda.is_available():
-    defdevice.force_device('cuda:0')
 
 image_embr = embedders.M2FImageEmbedder()
 text_embr = embedders.CLIPTextEmbedder()
