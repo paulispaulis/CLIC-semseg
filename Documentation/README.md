@@ -1,6 +1,7 @@
 # Documentation and ROS Integration 
 
-This forlder includes:
+Above root folder contains the actual code used for training the CLIC semantic segmentation.
+This forlder instead focuses on using the trained CLIC for inference and includes:
 
 - The paper describing CLIC approach to the semantic segmentation
 - Documented code version in the .zip file (incomplete)
