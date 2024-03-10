@@ -4,6 +4,7 @@ Above root folder contains the actual code used for training the CLIC semantic s
 This forlder instead focuses on using the trained CLIC for inference and includes:
 
 - The paper describing CLIC approach to the semantic segmentation
+- Self-contained notebook illustrating image segmentation (works in Google Colab)
 - Documented code version in the .zip file (incomplete)
 - Drawing summarizing the inference process
 - Robot Operating System (ROS) integration Python script sample.
