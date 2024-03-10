@@ -80,8 +80,8 @@ def run_image(smodel, path, labels, multilabel = False, aggregation = 'max', rou
     else:
         labels_s = labels
 
-    legend_patches = [mpatches.Patch(color=color, label=label) for color, label in zip(colorsl[:len(labels_s)], labels_s)]
-    ax1.legend(handles=legend_patches)
+    legend_patches = [mpatches.Patch(color = color, label = label) for color, label in zip(colorsl[:len(labels_s)], labels_s)]
+    ax1.legend(handles = legend_patches)
 
     # Individual heatmaps and their colorbars
     for idx, l in enumerate(labels):
@@ -103,7 +103,7 @@ def run_image(smodel, path, labels, multilabel = False, aggregation = 'max', rou
         plt.savefig(path[:-4] + 'output' + '.png', bbox_inches = 'tight')
 
 
-def run_video(path, smodel, labels, width, height, output_path, fps = 30, frame_count = 1000, frame_average = 5, draw_period = 10, web = False):
+def run_video(path, smodel, labels, width, height, output_path, fps = 30, frame_count = 1000, frame_average = 5, web = False):
     """
     Runs semantic segmentation on a video and outputs the processed video.
 
@@ -117,7 +117,6 @@ def run_video(path, smodel, labels, width, height, output_path, fps = 30, frame_
         fps (int, optional): Frames per second of the output video. Defaults to 30.
         frame_count (int, optional): Maximum number of frames to process. Defaults to 1000.
         frame_average (int, optional): Number of frames to average over for smoother segmentation. Defaults to 5.
-        draw_period (int, optional): Interval for displaying intermediate results. Defaults to 10.
         web (bool, optional): Whether to display intermediate results in a web interface. Defaults to False.
     """
 
@@ -128,7 +127,7 @@ def run_video(path, smodel, labels, width, height, output_path, fps = 30, frame_
     video_reader = VideoReader(path)
 
     hmaps = []
-    for i in range(frame_count):
+    for _ in range(frame_count):
         frame = video_reader.get_frame() # Get next video frame
         if frame is -1:
             break
@@ -145,14 +144,19 @@ def run_video(path, smodel, labels, width, height, output_path, fps = 30, frame_
 
         out.write(res_frame // 2 + frame // 2) #Writing to video file
 
-        #spam
-        if i % draw_period is 0 and not web:
-            legend_patches = [mpatches.Patch(color=color, label=label) for color, label in zip(colorsl[:len(labels)], labels)]
-            print('On frame ', i, '/', frame_count)
-            plt.figure()
-            plt.imshow(res_frame)
-            plt.legend(handles = legend_patches)
-            plt.title('frame ' + str(i))
+    legend_patches = [
+        mpatches.Patch(color = color, label = label) for color, label in zip(colorsl[:len(labels)], labels)]
+
+    # Plot the legend and save it as an image
+    legend = plt.legend(handles=legend_patches)
+    fig = legend.figure
+    fig.canvas.draw()
+    bbox = legend.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
+    fig.savefig("legend.png", bbox_inches = bbox)
+    plt.close(fig)  # Close the figure to prevent display
+
+    if not web:
+        print("See the segmented video and the legend in the current directory.")
 
     video_reader.release()
 

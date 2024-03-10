@@ -24,19 +24,21 @@ This paper presents a novel approach to open-set semantic segmentation in unstru
 
     ``` !git clone https://github.com/paulispaulis/clip-schizo.git ```
 
-    Step 2: Install dependencies
+    Step 2: Install FFmpeg
+
+    Step 3: Install dependencies
 
     ``` pip install -r requirements.txt ```
 
-    Step 3: Navigate to the demo folder
+    Step 4: Navigate to the demo folder
 
-    Step 4: Run the command in the terminal
+    Step 5: Run the command in the terminal
 
     ``` python -m streamlit run streamlit_demo.py ```
 
 - #### Follow the notebook on your local machine
 
-    Step 1: Navigate to [demo_notebook.ipynb](https://github.com/kalviskilups/clip-schizo/blob/demo/demo/demo_notebook.ipynb).
+    Step 1: Navigate to [demo_notebook.ipynb](https://github.com/paulispaulis/CLIC-semseg/blob/main/demo/demo_notebook.ipynb).
 
     Step 2: Follow the notebook and see awesome segmentation results! 🔥
 
