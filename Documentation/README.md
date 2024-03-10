@@ -13,6 +13,7 @@ This forlder includes:
 - Install dependencies: Python, PyTorch, CUDA (if using GPU), and the segmentation framework.
 - Set up a ROS workspace, clone your ROS package, and build it.
 - Set the entry point to initialize the ROS environment.
+- Run the container, ensuring it's connected to the ROS network (using network settings or ROS_MASTER_URI).
 
 ## Handling Framerate and Avoiding Buildup of Unprocessed Frames:
 
