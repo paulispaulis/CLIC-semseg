@@ -4,7 +4,7 @@ This repository contains the code implementation of the findings presented in th
 
 ## Authors:
 
-* Pauls Barzdins
+* Paulis Barzdins
 * Ingus Pretkalnins
 * Guntis Barzdins
 
