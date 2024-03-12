@@ -141,8 +141,9 @@ def run_video(path, smodel, labels, width, height, output_path, fps = 30, frame_
             hmaps = hmaps[1:]
         avg = np.array(hmaps).mean(axis = 0)
         res_frame = array_to_rgb(avg)
+        bgr_image = cv2.cvtColor(res_frame, cv2.COLOR_RGB2BGR) # Change mask colour from RGB to BGR used in OpenCV
 
-        out.write(res_frame // 2 + frame // 2) #Writing to video file
+        out.write(bgr_image // 2 + frame // 2) #Writing to video file
 
     legend_patches = [
         mpatches.Patch(color = color, label = label) for color, label in zip(colorsl[:len(labels)], labels)]
