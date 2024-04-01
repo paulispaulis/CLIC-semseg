@@ -1,1 +1,1 @@
-Experimental new feaures for CLIC
+Experimental new features for CLIC
