@@ -16,6 +16,7 @@ This forlder instead focuses on using the trained CLIC for inference and include
 - Set up a ROS workspace, clone your ROS package, and build it.
 - Set the entry point to initialize the ROS environment.
 - Run the container, ensuring it's connected to the ROS network (using network settings or ROS_MASTER_URI).
+- Root folder contains an example Dockerfile.txt for Streamlit demo. A self-contained pre-build docker image can be run with command "docker run -it -p 8503:8501 --gpus all guntisb/clic:commit2". It can serve as a template for the ROS docker integration.
 
 ## Handling Framerate and Avoiding Buildup of Unprocessed Frames:
 
