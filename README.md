@@ -8,7 +8,7 @@ This repository contains the code implementation of the findings presented in th
 * Ingus Pretkalnins
 * Guntis Barzdins
 
-This reserach received 2024 Latvia Science Award as part of the integration into the real robotic systems "Robota kognitīva uztvere un augsta līmeņa instrukciju interpretācija ar dabiskās valodas jēdzieniem" ([announcementEN] (https://www.lza.lv/en/activities/news/2120-the-latvian-academy-of-sciences-announces-winners-of-the-annual-science-achievements-competition-2024) | [announcementLV](https://www.lza.lv/aktualitates/lza-balva/2118-2024-gada-sasniegumi) | [description](https://github.com/paulispaulis/CLIC-semseg/blob/main/Documentation/sasniegumi_2024_final.pdf) | [video](https://replay.lsm.lv/lv/skaties/ieraksts/ltv/348077/latvija-radits-robots-kurs-saprot-cilveka-izteiktas-komandas)).
+This reserach received 2024 Latvia Science Award as part of the integration into the real robotic systems "Robota kognitīva uztvere un augsta līmeņa instrukciju interpretācija ar dabiskās valodas jēdzieniem" ([announcementEN](https://www.lza.lv/en/activities/news/2120-the-latvian-academy-of-sciences-announces-winners-of-the-annual-science-achievements-competition-2024) | [announcementLV](https://www.lza.lv/aktualitates/lza-balva/2118-2024-gada-sasniegumi) | [description](https://github.com/paulispaulis/CLIC-semseg/blob/main/Documentation/sasniegumi_2024_final.pdf) | [video](https://replay.lsm.lv/lv/skaties/ieraksts/ltv/348077/latvija-radits-robots-kurs-saprot-cilveka-izteiktas-komandas)).
 
 ## Overview
 
