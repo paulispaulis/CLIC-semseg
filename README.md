@@ -8,6 +8,8 @@ This repository contains the code implementation of the findings presented in th
 * Ingus Pretkalnins
 * Guntis Barzdins
 
+This reserach received 2024 Latvia Science Award as part of the integration into the real robotic systems "Robota kognitīva uztvere un augsta līmeņa instrukciju interpretācija ar dabiskās valodas jēdzieniem" ([description](https://www.lza.lv/aktualitates/lza-balva/2118-2024-gada-sasniegumi) | [video](https://replay.lsm.lv/lv/skaties/ieraksts/ltv/348077/latvija-radits-robots-kurs-saprot-cilveka-izteiktas-komandas)).
+
 ## Overview
 
 This paper presents a novel approach to open-set semantic segmentation in unstructured environments where there are no meaningful prior mask proposals. Our method leverages pre-trained encoders from foundation models and uses image-caption datasets for training, reducing the need for annotated masks and extensive computational resources. We introduce a novel contrastive loss function, named CLIC (Contrastive Loss function on Image-Caption data), which enables training a semantic segmentation model directly on an image-caption dataset. By utilising image-caption datasets, our method provides a practical solution for semantic segmentation in scenarios where large-scale segmented mask datasets are not readily available, as is the case for unstructured environments where full segmentation is unfeasible. Our approach is adaptable to evolving foundation models, as the encoders are used as black-boxes. The proposed method has been designed with robotics applications in mind to enhance their autonomy and decision-making capabilities in real-world scenarios.
